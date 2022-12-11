@@ -9,8 +9,21 @@
 </head>
 <body>
 <h3> Welcome to Sahad sathar website </h3>
-<button type="submit"> <a href="/signup"> SIGNUP </a> </button>
-<button type="submit"> <a href="/signin"> SIGNIN </a></button>
+{% for message in messages %}
+<div class="alert">
+<strong> Message : </strong> {{message}}
+<button type="submit" class="close" data-dismiss="alert" aria-label="close">
+    {% endfor %}
+</button>
+</div>
+<div>
+{% if user.is_authenticated %}
+<h3> Hellooow {{ name }} </h3>
+<h3> You're successfully logged in </h3>
+{% else %}
 <button type="submit"> <a href="/signout"> SIGNOUT </a> </button>
+<button type="submit"> <a href="/signup"> SIGNUP </a> </button>
+{% endif %}
+    </div>
 </body>
 </html>
