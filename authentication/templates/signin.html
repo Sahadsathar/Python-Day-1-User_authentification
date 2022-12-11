@@ -5,13 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SIGNUP</title>
+    <title>SIGNIN</title>
 </head>
 <body>
 {% for message in messages %}
 <div class="alert">
 <strong> Message : </strong> {{message}}
-<button type="submit" class="close" data-dismiss="alert" aria-label="close">
+<button type="button" class="close" data-dismiss="alert" aria-label="close">
+    <span aria-hidden="true">&times;</span>
 </button>
     {% endfor %}
 </div>
